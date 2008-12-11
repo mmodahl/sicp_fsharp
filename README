@@ -1,0 +1,11 @@
+== Structure and Interpretation of Computer Programs in F#
+
+As an excercise in the fundamentals of functional programming and as a way to get more 
+accustomed to F# and Visual Studio 2008, I will be following the 1986 lecture series 
+based on MIT course 6.001 "Structure and Interpretation of Computer Programs," but I will
+be programming with F#.
+
+The original text is available at http://mitpress.mit.edu/sicp/full-text/book/book.html
+The lectures are available at http://groups.csail.mit.edu/mac/classes/6.001/abelson-sussman-lectures/
+
+I hope to get through the entire series before my 90-day trial of Visual Studio runs out...
