@@ -1,0 +1,43 @@
+Chapter 1.1 - The Elements of Programming
+http://mitpress.mit.edu/sicp/full-text/book/book-Z-H-10.html
+
+Lecture 1a
+In which Dr. Abelson discusses Lisp, sorcerors, and the magic processes inside the machine.
+
+
+
+If programming is the synthesis of processes, programming languages must contain three 
+mechanisms to facilitate that synthesis.
+
+#Primitive Expressions - an ability to representat simple entities
+#Means of Combination - an ability to build simple entities into more complex ones
+#Means of Abstraction - an ability to name complex entities and manipulate them as units
+
+
+
+1.1.1 Expressions in F#
+
+Even as F# includes the inferred typing of Lisp, it is a strongly typed language.
+Visual Studio and F# bring information about how the types are interpretted close
+to the surface.  
+
+Primitive Types: unit, bool, char, int and float 
+Compound Types: string, tuple, records, variants
+
+Arithmetic: Inline in F# as opposed to Lisp's prefix notation
+
+
+
+1.1.2 Naming and the Environment
+
+1.1.3 Evaluating Combinations
+
+1.1.4 Compound Procedures
+
+1.1.5 The Substitution Model for Procedure Application
+
+Applicative order versus normal order
+
+1.1.6 Conditional Expressions and Predicates
+
+
