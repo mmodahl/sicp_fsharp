@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "lecture1a - ch1.1", "lecture1a - ch1.1\lecture1a - ch1.1.fsproj", "{75CBCC6F-C013-4AE0-AB62-8D757A1250C5}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "lecture1b - ch1.2", "lecture1b - ch1.2\lecture1b - ch1.2.fsproj", "{88DEA794-983E-4057-935C-2A338CD0D567}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{75CBCC6F-C013-4AE0-AB62-8D757A1250C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75CBCC6F-C013-4AE0-AB62-8D757A1250C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75CBCC6F-C013-4AE0-AB62-8D757A1250C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88DEA794-983E-4057-935C-2A338CD0D567}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88DEA794-983E-4057-935C-2A338CD0D567}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88DEA794-983E-4057-935C-2A338CD0D567}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88DEA794-983E-4057-935C-2A338CD0D567}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

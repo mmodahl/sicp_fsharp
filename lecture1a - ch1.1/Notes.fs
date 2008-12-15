@@ -9,8 +9,7 @@
 // here I receive an IDE warning
 // "This expression should have type 'unit' but has type 'int.'"
 
-// If you select the expression and right click -> send to F# Interactive in the IDE
-// the selection is evaluated.
+// Select the Expression and right click -> send to F# Interactive
 
 
 // Simple Arithmetic Expressions are written with traditional infix notation
@@ -27,7 +26,7 @@
 //(* 25 4 12)
 25 * 4 * 12
 
-// Nesting is done based on the expected arithmetic eules.
+// Nesting is done based on the expected arithmetic rules.
 //(+ (* 3 5) (- 10 6))
 (3 * 5) + (10 - 6)
 
@@ -39,6 +38,7 @@
 //      6))
 
 (((3 + 5) + (2 * 4)) * 3) + ((10 - 7) + 6)
+
 
 
 /// 1.1.2  Naming and the Environment
@@ -53,7 +53,6 @@ size
 //(define pi 3.14159)
 //(define radius 10)
 //(* pi (* radius radius))
-// --> 314.159
 
 let pi = 3.14159
 let radius = 10
@@ -61,37 +60,24 @@ pi * (radius * radius)
 // Here I finally have an error and not simply a warning:
 // The type 'int' does not match the type 'float'.
 
-// I'll investigate this later, for now, I'll simply 
-// redeclare radius as a float
-
 let radius = 10.0
 pi * (radius * radius)
 
 
 //(define circumference (* 2 pi radius))
 //circumference
-//--> 62.8318
 let circumference = 2.0 * pi * radius
 circumference
 
 
+
 ///1.1.3  Evaluating Combinations
-
-// Evaluation of a Combination should be as simple as 
-//  1. Evaluating all sub-expressions in operands
-//  2. Apply the operator on all operands.
-
-// The recursive nature of this way of problem solving is the core
-// of the scientific method and elegantly portrayed in Lisp.
 
 // (* (+ 2 (* 4 6))
 //   (+ 3 5 7))
 
-// Abelson and Sussman describe the this expression as a tree and 
-// explain its evaluation as tree accumulation.
-
-// In F#, the tree is still there, but you can't see it as easily.
 ((4 * 6) + 2) * (3 + (5 + 7))
+
 
 
 /// 1.1.4  Compound Procedures
@@ -99,10 +85,6 @@ circumference
 // Creating new procedures that take parameters 
 // (define (square x) (* x x))
 let square x = x * x
-
-// The general form is almost identical to Lisp 
-// (define (<name> <params>) <body>
-// let <name> <params> = <body>
 
 //(square 21)
 square 21
@@ -123,7 +105,9 @@ let f a = sum_of_squares (a+1) (a*2)
 f 5
 
 
+
 /// 1.1.5  The Substitution Model for Procedure Application
+
 
 
 /// 1.1.6  Conditional Expressions and Predicates
