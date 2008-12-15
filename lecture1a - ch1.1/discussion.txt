@@ -34,7 +34,7 @@ Typing is vital.  F# does duck-typing to determine what a variable most
 likely will be, but this is not perfect.  I'm assuming that I will be 
 strictly typing things going forward. 
 
-How will this affect passing of lambda's and operator overloading?
+How will this effect the passing of lambdas and operator overloading?
 
 
 
