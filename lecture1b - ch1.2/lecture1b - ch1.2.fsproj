@@ -5,13 +5,13 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{75cbcc6f-c013-4ae0-ab62-8d757a1250c5}</ProjectGuid>
+    <ProjectGuid>{88dea794-983e-4057-935c-2a338cd0d567}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>lecture1a___ch1.1</RootNamespace>
-    <AssemblyName>lecture1a___ch1.1</AssemblyName>
+    <RootNamespace>lecture1b___ch1.2</RootNamespace>
+    <AssemblyName>lecture1b___ch1.2</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <Name>lecture1a - ch1.1</Name>
+    <Name>lecture1b - ch1.2</Name>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>

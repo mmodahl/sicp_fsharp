@@ -1,0 +1,143 @@
+Chapter 1.2 - Procedures and the Processes They Generate
+http://mitpress.mit.edu/sicp/full-text/book/book-Z-H-11.html
+
+Lecture 1b
+In which Dr. Sussman discusses how the construction of spells influences process behavior.
+
+Expressions in Lisp
+ - Numbers
+ - Symbols (x, y, ...)
+ - lambda-expressions
+ - Definitions
+ - Conditions
+ - Combinations
+ 
+Substitution Rule (Application Order)
+ To Evaluate an Application
+  1. Evaluate the Operator to get Procedure
+  2. Evaluate the Operands to get Arguments
+  3. Apply the Procedure to the Arguments
+      3a. Copy the Body of the Procedure substituting the Arguments 
+           supplied for the formal parameters of the Procedure
+      3b. Evaluate the resulting new Body.
+
+let sum_of_squares x y = 
+	let sq x = x * x
+	(sq x) + (sq y)
+
+> sum_of_squares 3 4
+	Reduction Step
+> (sq 3) + (sq 4)
+> (sq 3) + (4 * 4)
+> (3 * 3) + (4 * 4)
+> (3 * 3) + 16
+> 9 + 16
+> 25
+
+Substitution Rule (Normal Order)
+Evaluates the Operands First then Operator
+
+
+Conditional Rule 
+if <predicate> then <consequent> else <alternative>
+
+"One thing that every sorceror will tell
+ you, if you have the name of a spirit, 
+ you have power over it."
+
+
+
+1.2.1  Linear Recursion and Iteration
+
+Peano Arithmetic - Linear Iterative
+let rec plus x y = 
+	if (x = 0) then
+		y
+	else
+		plus (x - 1) (y + 1)
+				
+> plus 3 4
+> (if (3=0) then 4 else plus (3-1) (4+1)
+> plus (3-1) (4+1)
+> plus (3-1) 5
+> plus 2 5
+> (if (2=0) then 5 else plus (2-1) (5+1)
+> plus (2-1) (5+1)
+> plus (2-1) 6
+> plus 1 6
+> (if (1=0) then 6 else plus (1-1) (6+1)
+> plus (1-1) (6+1)
+> plus (1-1) 7
+> plus 0 7
+> (if (0=0) then 7 else plus (0-1) (7+1)
+> 7
+
+
+
+Peano Arithmetic - Linear Recursive
+let rec plus x y = 
+	if (x = 0) then 
+		y
+	else
+		1 + (plus (x - 1) y)
+
+> plus 3 4
+> if (3 = 0) then 4 else 1 + (plus (3-1) 4)
+> 1 + (plus (3-1) 4)
+> 1 + (plus 2 4)
+> 1 + if (2 = 0) then 4 else 1 + (plus (2-1) 4)
+> 1 + 1 + (plus (2-1) 4)
+> 1 + 1 + (plus 1 4)
+> 1 + 1 + if (1 = 0) then 4 else 1 + (plus (1-1) 4)
+> 1 + 1 + 1 + (plus (1-1) 4)
+> 1 + 1 + 1 + (plus 0 4)
+> 1 + 1 + 1 + if (0 = 0) then 4 else 1 + (plus (0-1) 4)
+> 1 + 1 + 1 + 4 
+> 1 + 1 + 5 
+> 1 + 6 
+> 7
+
+Vertical Steps in Evaluation => Proportionality to Time
+Horizontal Length in Evaluation => Proportionality to Space
+
+Linear Iteration => time = O(n) && space = O(1)
+Linear Recursion => time = O(n) && space = O(n)
+
+
+
+1.2.2  Tree Recursion
+
+let rec fib n = 
+    if (n < 2) then
+        n
+    else
+		(fib (n-1)) + (fib (n-2))
+
+>				fib 4
+>		(fib 3)				+ (fib 2)
+> (fib 2 + fib 1)			+ (fib 1 + fib 0)
+> (fib 1 + fib 0 + fib 1)	+ (fib 1 + fib 0)
+>    1   +   0   + 1		+    1   +   0
+
+time = O(fib(n))
+space = O(n)
+
+
+Towers of Hanoi
+
+let rec move_tower (n_high:int) (from_spike:int) (to_spike:int) (spare_spike:int) = 
+    if (n_high <> 0) then
+        move_tower (n_high - 1) from_spike spare_spike to_spike |> ignore
+        Printf.printfn "Disk# %i, from Spike %i to Spike %i" n_high from_spike to_spike
+        move_tower (n_high - 1) spare_spike to_spike from_spike |> ignore
+
+
+
+1.2.3  Orders of Growth
+
+1.2.4  Exponentiation
+
+1.2.5  Greatest Common Divisors
+
+1.2.6  Example: Testing for Primality
+
