@@ -1,0 +1,87 @@
+Chapter 1.1 - The Elements of Programming
+http://mitpress.mit.edu/sicp/full-text/book/book-Z-H-10.html
+
+Lecture 1a
+In which Dr. Abelson discusses Lisp, sorcerors, and the magic processes inside the machine.
+
+
+
+If programming is the synthesis of processes, programming languages must contain three 
+mechanisms to facilitate that synthesis.
+
+#Primitive Expressions - an ability to representat simple entities
+#Means of Combination - an ability to build simple entities into more complex ones
+#Means of Abstraction - an ability to name complex entities and manipulate them as units
+
+
+
+1.1.1 Expressions in F#
+
+Even as F# includes the inferred typing of Lisp, it is a strongly typed language.
+Visual Studio and F# bring information about how the types are interpretted close
+to the surface.  
+
+Primitive Types: unit, bool, char, int and float 
+Compound Types: string, tuple, records, variants
+
+Arithmetic: Inline in F# as opposed to Lisp's prefix notation
+
+
+
+1.1.2 Naming and the Environment
+
+Typing is vital.  F# does duck-typing to determine what a variable most
+likely will be, but this is not perfect.  I'm assuming that I will be 
+strictly typing things going forward. 
+
+How will this effect the passing of lambdas and operator overloading?
+
+
+
+1.1.3 Evaluating Combinations
+
+Evaluation of a Combination should be as simple as 
+  1. Evaluating all sub-expressions in operands
+  2. Apply the operator on all operands.
+
+The recursive nature of this way of problem solving is the core
+of the scientific method and elegantly portrayed in Lisp.
+
+ (* (+ 2 (* 4 6))
+   (+ 3 5 7))
+
+Abelson and Sussman describe the this expression as a tree and 
+explain its evaluation as tree accumulation.
+
+In F#, the tree is still there, but you can't see it as easily.
+ ((4 * 6) + 2) * (3 + (5 + 7))
+
+
+1.1.4 Compound Procedures
+
+The general form for procedure definition is almost identical to Lisp 
+ (define (<name> <params>) <body>
+ let <name> <params> = <body>
+
+
+
+1.1.5 The Substitution Model for Procedure Application
+
+Applicative order versus normal order
+
+
+
+1.1.6 Conditional Expressions and Predicates
+
+I can't find anything similar to the Lisp cond statement at this point.
+There is a function match but it is not evaluated in the same way.
+
+The F# if/then/else statement is as expected.
+"if <predicate> then <consequent> else <alternative>"
+
+
+
+1.1.7 Example: Square Roots by Newton's Method
+
+
+1.1.8 Procedures as Black-Box Abstractions

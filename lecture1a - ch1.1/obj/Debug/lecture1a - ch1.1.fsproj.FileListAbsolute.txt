@@ -1,5 +1,0 @@
-C:\Documents and Settings\Martin Modahl\My Documents\projects\sicp_fsharp\lecture1a - ch1.1\bin\Debug\lecture1a___ch1.1.exe
-C:\Documents and Settings\Martin Modahl\My Documents\projects\sicp_fsharp\lecture1a - ch1.1\bin\Debug\lecture1a___ch1.1.pdb
-C:\Documents and Settings\Martin Modahl\My Documents\projects\sicp_fsharp\lecture1a - ch1.1\obj\Debug\ResolveAssemblyReference.cache
-C:\Documents and Settings\Martin Modahl\My Documents\projects\sicp_fsharp\lecture1a - ch1.1\obj\Debug\lecture1a___ch1.1.exe
-C:\Documents and Settings\Martin Modahl\My Documents\projects\sicp_fsharp\lecture1a - ch1.1\obj\Debug\lecture1a___ch1.1.pdb
