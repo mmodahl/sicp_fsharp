@@ -1,2 +1,38 @@
 Chapter 1.3 - Formulating Abstractions with Higher-Order Procedures
 http://mitpress.mit.edu/sicp/full-text/book/book-Z-H-12.html
+
+
+Lecture 2a
+In which Dr. Sussman smashes the illusion that functional programming is 
+just Basic or Pascal with a funny syntax.
+
+
+1.3  Formulating Abstractions with Higher-Order Procedures
+
+
+1.3.1  Procedures as Arguments
+
+Whenever you see yourself writing the same thing down more than once,
+there is something wrong and you shouldn't be doing it. ==> DRY it up!
+
+Think it about like the maths: you always know Sigma and its notation. 
+
+
+1.3.2  Constructing Procedures Using Lambda
+
+
+
+1.3.3  Procedures as General Methods
+
+Function chains like signal processing. 
+
+let sqrt x = 
+	let average_damp f =
+		let average (i:float) (j:float) = (i + j) / 2.0
+		(fun x -> average x (f x))
+	(fixed_point (average_damp (fun y:int -> x/y)) 1)
+
+
+
+1.3.4  Procedures as Returned Values
+
