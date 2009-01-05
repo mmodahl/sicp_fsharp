@@ -216,11 +216,14 @@ let smallest_divisor (n:int) =
 //                    m))))        
 
 let rec expmod (basen:int) (exp:int) (m:int) = 
+    let square x = x * x
     if (exp = 0) then 
         1
-    else 
-        (basen * (expmod basen (exp - 1) m)) % m
-        
+    else
+        if ((exp % 2) = 0) then 
+            (square (expmod basen (exp / 2) m)) % m
+        else
+            (basen * (expmod basen (exp - 1) m)) % m
             
 //(define (fermat-test n)
 //  (define (try-it a)
@@ -229,7 +232,7 @@ let rec expmod (basen:int) (exp:int) (m:int) =
 
 open System  
 let fermat_test (n:int) = 
-    let try_it (a:int) = ((expmod a n n) = n)
+    let try_it (a:int) = (expmod a n n) = a
     try_it (Random().Next(1, n-1))
     
     

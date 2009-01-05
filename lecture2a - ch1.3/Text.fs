@@ -340,9 +340,9 @@ let average_damp f =
     let average (i:float) (j:float) = (i + j) / 2.0
     (fun x -> average x (f x))
     
-let square x = x * x
+let square (x:float) = x * x
 
-(average_damp square) 10
+(average_damp square) 10.0
 
 //(define (sqrt x)
 //  (fixed-point (average-damp (lambda (y) (/ x y)))

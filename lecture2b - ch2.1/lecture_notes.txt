@@ -1,0 +1,39 @@
+Chapter 2.1 - Building Abstractions with Data
+http://mitpress.mit.edu/sicp/full-text/book/book-Z-H-13.html
+
+
+Lecture 2b
+In which Dr. Abelson contracts with George to come in and discuss abstractions.
+
+2  Building Abstractions with Data
+
+Data Abstractions exist the exact same way that method abstractions do.  By combining
+primitive data types into compound data types, we can implement more interesting
+and advanced functionality.
+
+
+2.1  Introduction to Data Abstraction
+
+2.1.1  Example: Arithmetic Operations for Rational Numbers
+
+Imagining that structures exist for rational numbers, we imagine how arithmetic might
+be implemented.
+
+In lisp the structure is a list.  In F#, we have the ability to implement the structure
+as a list or as a tuple set or as a more advanced Object.
+
+Or like in scheme using simple closures...
+let cons a b = function
+    | 1 -> a
+    | 0 -> b
+let car p = p 1
+let cdr p = p 0
+
+
+2.1.2  Abstraction Barriers
+
+2.1.3  What Is Meant by Data?
+
+2.1.4  Extended Exercise: Interval Arithmetic
+
+
